@@ -20,7 +20,6 @@ const Register = () => {
 
   return (
     <form onSubmit={handleSubmit}> {}
-      <h2>Create Account</h2>
       <input 
         type="email" 
         placeholder="Email" 

@@ -9,7 +9,8 @@ import './App.css';
 
 const App = () => {
     const [user, setUser] = useState(null); 
-    const [loading, setLoading] = useState(true); 
+    const [loading, setLoading] = useState(true);
+    const [isLoginMode, setIsLoginMode] = useState(false);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -35,17 +36,33 @@ const App = () => {
     return (
         <div>
             {user ? ( 
-                <>
+                <div>
                     <h1>Welcome, {user.email}!</h1>
                     <button onClick={handleLogout}>Logout</button>
                     <HabitForm userId={user.uid} /> {}
                     <HabitList userId={user.uid} /> {}
-                </>
+                </div>
             ) : (
                 <div>
-                    <h2>Please Login or Create a new account</h2>
-                    <Login />
-                    <Register />
+                    {isLoginMode ? (
+                        <>
+                            <h2>Login</h2>
+                            <Login /> 
+                            <p>
+                                Don't have an account? 
+                                <button onClick={() => setIsLoginMode(false)}>Sign Up</button>
+                            </p>
+                        </>
+                    ) : (
+                        <>
+                            <h2>Sign Up</h2>
+                            <Register /> 
+                            <p>
+                                Already have an account? 
+                                <button onClick={() => setIsLoginMode(true)}>Login</button>
+                            </p>
+                        </>
+                    )}
                 </div>
             )}
         </div>

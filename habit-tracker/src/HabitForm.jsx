@@ -13,7 +13,9 @@ const HabitForm = ({ userId }) => {
                 await addDoc(collection(db, 'habits'), {
                     name: habit,
                     userId: userId, 
-                    createdAt: new Date() 
+                    createdAt: new Date(),
+                    completed: false,
+                    completionCount: 0,
                 });
                 setHabit(''); 
             } catch (error) {
