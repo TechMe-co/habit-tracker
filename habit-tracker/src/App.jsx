@@ -6,6 +6,7 @@ import Login from './Login.jsx';
 import HabitForm from './HabitForm.jsx'; 
 import HabitList from './HabitList.jsx'; 
 import './App.css';
+import './HabitList.css';
 
 const App = () => {
     const [user, setUser] = useState(null); 
@@ -37,8 +38,8 @@ const App = () => {
         <div>
             {user ? ( 
                 <div>
-                    <h1>Welcome, {user.email}!</h1>
                     <button onClick={handleLogout}>Logout</button>
+                    <h1>Welcome, {user.email}!</h1>
                     <HabitForm userId={user.uid} /> {}
                     <HabitList userId={user.uid} /> {}
                 </div>
@@ -55,7 +56,7 @@ const App = () => {
                         </>
                     ) : (
                         <>
-                            <h2>Sign Up</h2>
+                            <h2>Create account</h2>
                             <Register /> 
                             <p>
                                 Already have an account? 
