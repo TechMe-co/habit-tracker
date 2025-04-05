@@ -25,11 +25,13 @@ Follow these steps to run the Habit Tracker application locally:
    git clone https://github.com/your-username/habit-tracker.git
    cd habit-tracker
 2. **Install dependencies:** Make sure you have Node.js installed. Then, run:
+    ```bash
     npm install
 3. **Set up Firebase:**
-    -Go to the Firebase Console and create a new project.
-    -Enable Firestore and Authentication (use Email/Password method).
-    -Create a .env file in the root of your project and add your Firebase configuration values:
+    - Go to the Firebase Console and create a new project.
+    - Enable Firestore and Authentication (use Email/Password method).
+    - Create a .env file in the root of your project and add your Firebase configuration values:
+    ```bash
         VITE_API_KEY=your_api_key
         VITE_AUTH_DOMAIN=your_project_id.firebaseapp.com
         VITE_PROJECT_ID=your_project_id
@@ -37,14 +39,15 @@ Follow these steps to run the Habit Tracker application locally:
         VITE_MESSAGING_SENDER_ID=your_sender_id
         VITE_APP_ID=your_app_id
 4. **Run the application:**
+    ```bash
     npm run dev
-    --Open your browser and visit http://localhost:3000 to see the application.
+     <!-- Open your browser and visit http://localhost:3000 to see the application. -->
 
 ## Usage
--Register: Click on the register button to create a new account.
--Login: After registration, you can log in with your credentials.
--Manage Habits:
-    *Once logged in, you can add habits, view all your habits, and delete them as needed.
+- Register: Click on the register button to create a new account.
+- Login: After registration, you can log in with your credentials.
+- Manage Habits:
+    - **Once logged in, you can add habits, view all your habits, and delete them as needed.**
 
 ## Contributing
 If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes.
