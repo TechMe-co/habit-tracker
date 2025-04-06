@@ -32,7 +32,12 @@ const App = () => {
     };
 
     if (loading) {
-        return <p>Loading...</p>; 
+        return (
+          <>
+            <div class="loader"></div>
+            <p>Please wait...</p>
+          </>
+      )
     }
 
     return (

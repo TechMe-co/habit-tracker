@@ -1,5 +1,5 @@
 body {
-    padding-top: 60px; 
+    padding-top: 300px; 
 }
 .navbar {
     display: flex; 
@@ -13,6 +13,7 @@ body {
     left: 0; 
     right: 0; 
     z-index: 1000; 
+    margin-bottom: -200px;
 }
 
 .navbar-logo {

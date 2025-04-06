@@ -1,6 +1,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to bottom right, #3490c2e1, #ffffff4d);
+    margin: 0;
+    padding: 0;
 }
 
 ul {
@@ -14,7 +16,6 @@ li {
     align-items: center;   
     justify-content: space-between; 
     padding: 10px;       
-    /* border-bottom: 1px solid #ccc;  */
 }
 
 input[type="checkbox"] {
@@ -46,9 +47,9 @@ input[type="text"] {
 }
 
 .habit-list {
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
 }
 
 .habit-item {
@@ -76,9 +77,4 @@ input[type="text"] {
 .button-container {
     display: flex;
     gap: 10px; 
-}
-
-.divider {
-    width: 100%;
-    border: 1px solid #ccc;
 }
