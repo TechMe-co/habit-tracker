@@ -7,6 +7,7 @@ import HabitForm from './HabitForm.jsx';
 import HabitList from './HabitList.jsx'; 
 import './App.css';
 import './HabitList.css';
+import Navbar from './Navbar';
 
 const App = () => {
     const [user, setUser] = useState(null); 
@@ -38,10 +39,10 @@ const App = () => {
         <div>
             {user ? ( 
                 <div>
-                    <button onClick={handleLogout}>Logout</button>
+                    <Navbar onLogout={handleLogout} />
                     <h1>Welcome, {user.email}!</h1>
-                    <HabitForm userId={user.uid} /> {}
-                    <HabitList userId={user.uid} /> {}
+                    <HabitForm userId={user.uid} /> 
+                    <HabitList userId={user.uid} /> 
                 </div>
             ) : (
                 <div>
